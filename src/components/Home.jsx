@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setDeals } from '../redux/homeSlice';
-import './Home.css';
+import steamImg from '../assets/steamImg.svg';
 
 function Home() {
   const deals = useSelector((state) => state.home);
@@ -20,8 +20,11 @@ function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
-      <p>This is the home page</p>
+      <div className='steamHeader'>
+        <img src={steamImg} alt="steam" style={{width: '100px'}}/>
+        <h1>Steam games</h1>
+      </div>
+      <div className='organizer'>GAMES BY DEAL RANKING</div>
       <div className="dealsList">
         {deals.map((deal) => (
           <Link to={`/deals/${deal.dealID}`} key={deal.dealID} className='dealCard'>

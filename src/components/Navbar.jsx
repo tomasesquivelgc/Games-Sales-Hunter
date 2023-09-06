@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import arrowPrevSmall from '../assets/arrowPrevSmall.svg';
 
 const Navbar = () => (
-  <div>
+  <div className='navbar'>
     <Link to="/">
-      <button type="button">
+      <a>
         {' '}
-        <img src={arrowPrevSmall} alt="arrow" style={{width:'20px'}}/>
+        <img src={arrowPrevSmall} alt="arrow" style={{width:'30px'}}/>
         {' '}
-      </button>
+      </a>
     </Link>
   </div>
 );
