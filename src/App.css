@@ -1,39 +1,70 @@
+* {
+  margin: 0;
+}
+
 body {
   color: #fcfcff;
+  background-color: #5588e3;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.latoFont {
+  font-family: 'Lato', sans-serif;
 }
 
 .navbar {
   background-color: #4369b2;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.navItem {
+  width: 50px;
+  padding: 10px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .dealsList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.steamHeader{
+.steamHeader {
   background-color: #5588e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .organizer {
   width: 100%;
   background-color: #35548b;
+  height: 20px;
 }
 
 .dealCard {
   text-align: center;
   text-decoration: none;
-  min-height: 130px;
+  min-height: 140px;
+  padding: 10px;
 }
 
 .dealCard:nth-child(4n),
 .dealCard:nth-child(4n + 1) {
-  background-color: #4268af; /* Pink */
+  background-color: #4268af;
 }
 
 .dealCard:nth-child(4n + 2),
 .dealCard:nth-child(4n + 3) {
-  background-color: #4063a6; /* Dark Pink */
+  background-color: #4063a6;
 }
 
 a {
