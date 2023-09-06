@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const ViewDeal = () => {
-  let rawID = useParams().title;
-  let dealID = encodeURIComponent(rawID);
+  const rawID = useParams().title;
+  const dealID = encodeURIComponent(rawID);
 
   const [dealData, setDealData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://www.cheapshark.com/api/1.0/deals?id=${dealID}`
-        );
-        if (!response.ok) {
-          throw new Error("API request failed");
-        }
-        const data = await response.json();
-        setDealData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
+      const response = await fetch(
+        `https://www.cheapshark.com/api/1.0/deals?id=${dealID}`,
+      );
+      if (!response.ok) {
+        throw new Error('API request failed');
       }
+      const data = await response.json();
+      setDealData(data);
     };
-    fetchData();
+    fetchData().catch((error) => {
+      throw error;
+    });
   }, [dealID]);
-
-  console.log(dealData)
 
   return (
     <div>
