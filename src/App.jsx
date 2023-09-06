@@ -6,6 +6,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/deals/:title" element={<h1>Deals</h1>} />
       </Routes>
     </>
   );
