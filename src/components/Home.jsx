@@ -24,7 +24,7 @@ function Home() {
       <p>This is the home page</p>
       <div className="dealsList">
         {deals.map((deal) => (
-          <Link to={`/deals/${deal.dealID}`} key={deal.dealID}>
+          <Link to={`/deals/${deal.dealID}`} key={deal.dealID} className='dealCard'>
             <div>
               <h2>{deal.title}</h2>
               <img src={deal.thumb} alt={deal.title} />

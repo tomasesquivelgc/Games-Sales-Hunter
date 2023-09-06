@@ -3,8 +3,22 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.dealsList > div {
-  border: 1px solid #ccc;
-  padding: 10px;
+.dealCard {
   text-align: center;
+  text-decoration: none;
+  min-height: 130px;
+}
+
+.dealCard:nth-child(4n),
+.dealCard:nth-child(4n + 1) {
+  background-color: #4268af; /* Pink */
+}
+
+.dealCard:nth-child(4n + 2),
+.dealCard:nth-child(4n + 3) {
+  background-color: #4063a6; /* Dark Pink */
+}
+
+a {
+  color: #fcfcff;
 }
