@@ -1,0 +1,10 @@
+.dealsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+.dealsList > div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
