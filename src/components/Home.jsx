@@ -24,7 +24,7 @@ function Home() {
         <img src={steamImg} alt="steam" style={{ width: '100px' }} />
         <h1>STEAM DEALS</h1>
       </div>
-      <div className="organizer latoFont">GAMES BY DEAL RANKING</div>
+      <div className="organizer">GAMES BY DEAL RANKING</div>
       <div className="dealsList">
         {deals.map((deal) => (
           <Link to={`/deals/${deal.dealID}`} key={deal.dealID} className="dealCard">
