@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <div>
-      <div className="steamHeader">
+      <div className="pageHeader">
         <img src={steamImg} alt="steam" style={{ width: '100px' }} />
         <h1>STEAM DEALS</h1>
       </div>

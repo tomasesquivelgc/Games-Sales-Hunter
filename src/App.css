@@ -37,11 +37,15 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.steamHeader {
+.pageHeader {
   background-color: #5588e3;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.headerImage {
+  
 }
 
 .organizer {
