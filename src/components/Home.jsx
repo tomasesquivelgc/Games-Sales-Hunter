@@ -29,9 +29,9 @@ function Home() {
         {deals.map((deal) => (
           <Link to={`/deals/${deal.dealID}`} key={deal.dealID} className="dealCard">
             <div>
-              <i className="fa-regular fa-circle-right" style={{ color: '#fcfcff', float:'right' }} />
-              <div style={{clear:'both'}}> 
-                <img src={deal.thumb} alt={deal.title}/>
+              <i className="fa-regular fa-circle-right" style={{ color: '#fcfcff', float: 'right' }} />
+              <div style={{ clear: 'both' }}>
+                <img src={deal.thumb} alt={deal.title} />
                 <h2>{deal.title}</h2>
                 <p>{deal.salePrice}</p>
               </div>
