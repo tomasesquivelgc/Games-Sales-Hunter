@@ -29,31 +29,32 @@ const ViewDeal = () => {
     <div>
       {dealData ? (
         <>
-        <div className='pageHeader'>
-          <img src={dealData.gameInfo.thumb} alt={dealData.gameInfo.name} className='headerImage' />
+        <div className='pageHeader' style={{justifyContent:'space-around'}}>
+          <img src={dealData.gameInfo.thumb} alt={dealData.gameInfo.name} style={{height:'10vh'}} />
           <div>
-            <h1>{dealData.gameInfo.name}</h1>
-            <p>SALE PRICE: {dealData.gameInfo.salePrice}</p>
+            <h2>{dealData.gameInfo.name.toUpperCase()}</h2>
+            <p>SALE PRICE: ${dealData.gameInfo.salePrice}</p>
           </div>
         </div>
+        <div className="organizer">DEAL INFO</div>
         <ul className='pageBody'>
           <li>
-            <p>RETAIL PRICE: {dealData.gameInfo.retailPrice}</p>
+            <p>RETAIL PRICE:</p><p>${dealData.gameInfo.retailPrice}</p>
           </li>
           <li>
-            <p>STEAM RATING: {dealData.gameInfo.steamRatingText}</p>
+            <p>STEAM RATING:</p><p>{dealData.gameInfo.steamRatingText}</p>
           </li>
           <li>
-            <p>NUMBER OF REVIEWS: {dealData.gameInfo.steamRatingCount}</p>
+            <p>NUMBER OF REVIEWS:</p><p>{dealData.gameInfo.steamRatingCount}</p>
           </li>
           <li>
-            <p>POSITIVE REVIEWS: {dealData.gameInfo.steamRatingPercent}%</p>
+            <p>POSITIVE REVIEWS:</p><p>{dealData.gameInfo.steamRatingPercent}%</p>
           </li>
           <li>
-            <p>RELEASE DATE: {dateInfo.toLocaleDateString()}</p>
+            <p>RELEASE DATE:</p><p>{dateInfo.toLocaleDateString()}</p>
           </li>
           <li>
-            <p>STEAM APP ID: {dealData.gameInfo.steamAppID}</p>
+            <p>STEAM APP ID:</p><p>{dealData.gameInfo.steamAppID}</p>
           </li>
           <li>
             <a id="cheapSharkLink" href={cheapSharkLink}>LINK TO THE STEAM STORE</a>
