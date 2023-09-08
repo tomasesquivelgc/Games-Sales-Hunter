@@ -1,19 +1,16 @@
-import { render, waitFor } from '@testing-library/react';
-import { expect, it, test, vi } from 'vitest';
-import ViewDeal from '../components/ViewDeal';
+import { render } from '@testing-library/react';
+import {
+  expect, it, vi,
+} from 'vitest';
 import { Provider } from 'react-redux'; // Import Provider
 import configureMockStore from 'redux-mock-store'; // Import mock store
+import ViewDeal from '../components/ViewDeal';
 
 global.fetch = vi.fn();
-
-function createFetchResponse(data) {
-  return { json: () => new Promise((resolve) => resolve(data)) };
-}
 
 const mockStore = configureMockStore(); // Create a mock store
 
 describe('ViewDeal Component', () => {
-
   it('should display "Loading..." when waiting for API response', async () => {
     // Mock an unresolved promise to simulate an ongoing API request
     fetch.mockResolvedValue(new Promise(() => {}));
@@ -26,7 +23,7 @@ describe('ViewDeal Component', () => {
       </Provider>,
       {
         route: '/deals/1', // Simulate route parameter
-      }
+      },
     );
 
     expect(getByText('Loading...')).toBeDefined();
