@@ -5,7 +5,7 @@ import { setDeals } from '../redux/homeSlice';
 import steamImg from '../assets/steamImg.svg';
 
 function Home() {
-  const deals = useSelector((state) => state.home);
+  const deals = useSelector((state) => state.deals);
   const dispatch = useDispatch();
 
   useEffect(() => {
