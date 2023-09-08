@@ -34,7 +34,7 @@
 
 # 📖 [Game Sales Hunter] <a name="about-project"></a>
 
-This is my Capstone Project for Microverse Module 3: React&Redux. Games Sales Hunter is a simple SPA designed for mobile. It's purpouse is to fetch a list of game deals on steam using [CheapShark API](https://apidocs.cheapshark.com) and redirect you to a dinaminc Route that will present you with more information and a link to the official steam store. For a better look you can check my video: [REDACTED]
+This is my Capstone Project for Microverse Module 3: React&Redux. Games Sales Hunter is a simple SPA designed for mobile. It's purpouse is to fetch a list of game deals on steam using [CheapShark API](https://apidocs.cheapshark.com) and redirect you to a dinaminc Route that will present you with more information and a link to the official steam store. For a better look you can check my video: [Module 3 Capstone project](https://www.loom.com/share/20cb3c26e17541e3a7789ec4b8499f2d?sid=9f7892df-6895-4a86-aa3f-1439205cb77e)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,7 +77,7 @@ This is my Capstone Project for Microverse Module 3: React&Redux. Games Sales Hu
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://monumental-raindrop-ef8680.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
