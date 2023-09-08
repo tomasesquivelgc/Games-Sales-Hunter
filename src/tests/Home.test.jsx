@@ -1,7 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import nock from 'nock';
 import { expect, it } from 'vitest';
 import { BrowserRouter } from 'react-router-dom';
 import Home from '../components/Home';
@@ -12,27 +11,21 @@ describe('Home', () => {
   let store;
   beforeEach(() => {
     store = mockStore({
-      deals: [{
-        dealID: '1',
-        title: 'Test Game',
-        salePrice: '1.00',
-        thumb: 'https://www.example.com/image.png',
-      }],
+      deals: [],
     });
   });
 
-  nock('https://www.cheapshark.com/api/1.0')
-    .get('/deals?storeID=1')
-    .reply(200, [
-      {
-        dealID: '1',
-        title: 'Test Game',
-        salePrice: '1.00',
-        thumb: 'https://www.example.com/image.png',
-      },
-    ]);
-
   it('shouldnt fetch items from API when there are some', async () => {
+    store = mockStore({
+      deals: [
+        {
+          dealID: '1',
+          title: 'Test Game',
+          salePrice: '1.00',
+          thumb: 'https://www.example.com/image.png',
+        },
+      ],
+    });
     render(
       <Provider store={store}>
         <BrowserRouter>
