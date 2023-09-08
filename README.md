@@ -171,6 +171,7 @@ You can deploy this project using:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
+Thank you [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the [project template](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
