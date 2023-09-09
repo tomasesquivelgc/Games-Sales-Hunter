@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+}
+
+body {
+  color: #fcfcff;
+  background-color: #5588e3;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.latoFont {
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  background-color: #4369b2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItem {
+  width: 50px;
+  padding: 10px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dealsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pageHeader {
+  background-color: #5588e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  text-align: center;
+}
+
+.organizer {
+  background-color: #35548b;
+  height: 20px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.organizer .searchBar {
+  margin-left: 10px;
+}
+
+.dealCard {
+  text-align: center;
+  text-decoration: none;
+  min-height: 150px;
+  padding: 10px;
+}
+
+.dealCard:nth-child(4n),
+.dealCard:nth-child(4n + 1) {
+  background-color: #4268af;
+}
+
+.dealCard:nth-child(4n + 2),
+.dealCard:nth-child(4n + 3) {
+  background-color: #4063a6;
+}
+
+a {
+  color: #fcfcff;
+}
+
+.pageBody {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.pageBody li {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.pageBody li:nth-child(odd) {
+  background-color: #4268af;
+}
+
+.pageBody li:nth-child(even) {
+  background-color: #4063a6;
+}
+
+#cheapSharkLink {
+  position: absolute; /* Add this line */
+  left: 50%; /* Horizontal centering */
+  transform: translateX(-50%); /* Adjust to center the link */
+}
