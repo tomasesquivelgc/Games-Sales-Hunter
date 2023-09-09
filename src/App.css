@@ -52,11 +52,11 @@ body {
   padding: 5px 10px;
   display: flex;
   flex-direction: row;
-  align-items: center; 
+  align-items: center;
 }
 
 .organizer .searchBar {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .dealCard {
