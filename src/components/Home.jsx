@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setDeals } from '../redux/homeSlice';
 import steamImg from '../assets/steamImg.svg';
 
 function Home() {
+  const [searchTerm, setSearchTerm] = useState('');
   const deals = useSelector((state) => state.deals);
   const dispatch = useDispatch();
 
@@ -18,15 +19,28 @@ function Home() {
     }
   }, [deals, dispatch]);
 
+  const lowerCaseSearch = searchTerm.toLowerCase();
+  const filteredDeals = deals.filter((deal) => deal.title.toLowerCase().includes(lowerCaseSearch));
+
   return (
     <div>
       <div className="pageHeader">
         <img src={steamImg} alt="steam" style={{ width: '100px' }} />
         <h1>STEAM DEALS</h1>
       </div>
-      <div className="organizer">GAMES BY DEAL RANKING</div>
+      <div className="organizer">
+        SEARCH FOR A GAME:
+        <div className="searchBar">
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+      </div>
       <div className="dealsList">
-        {deals.map((deal) => (
+        {filteredDeals.map((deal) => (
           <Link to={`/deals/${deal.dealID}`} key={deal.dealID} className="dealCard">
             <div>
               <i className="fa-regular fa-circle-right" style={{ color: '#fcfcff', float: 'right' }} />

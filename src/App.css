@@ -50,6 +50,13 @@ body {
   background-color: #35548b;
   height: 20px;
   padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+}
+
+.organizer .searchBar {
+  margin-left: 10px; 
 }
 
 .dealCard {
